@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+
+<div class="container">
+    <h3>Todas as tasks</h3>
+
+   <form action="/tasks/add" class="form" method="POST">
+        <div class="control">
+            <label for="c-titulo">Título:</label>
+            <input type="text" id="c-titulo" name="title" name="title" placeholder="O que você vai fazer?" required>
+        </div>
+
+        <div class="control">
+            <label for="c-description">Descrição:</label>
+            <textarea name="description" id="c-description" placeholder="Descreva a tarefa..."></textarea>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+        <button type="reset">Limpar</button>
+   </form> <!-- Formulário -->
+</div>
+
+<%- include('partials/body') %>

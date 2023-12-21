@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+
+<div class="container">
+    <h3>Editar tarefa: <%= task.title %></h3>
+
+   <form action="/tasks/update/<%= task.id %>" class="form" method="POST">
+        <div class="control">
+            <label for="c-titulo">Título:</label>
+            <input type="text" id="c-titulo" name="title" value="<%= task.title %>" placeholder="O que você vai fazer?" required>
+        </div>
+
+        <div class="control">
+            <label for="c-description">Descrição:</label>
+            <textarea name="description" id="c-description" placeholder="Descreva a tarefa..."><%= task.description %></textarea>
+        </div>
+
+        <button type="submit">Editar</button>
+        <button type="reset">Limpar</button>
+   </form> <!-- Formulário -->
+</div>
+
+<%- include('partials/body') %>

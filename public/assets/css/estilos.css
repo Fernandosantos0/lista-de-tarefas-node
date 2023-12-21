@@ -1,0 +1,176 @@
+:root {
+    font-size: 62.5%;
+    --color-primary: hwb(5 25% 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    background-color: var(--color-primary);
+    padding-block: 1.5rem;
+    color: hwb(0 100% 0%);
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 2%;
+}
+
+.msg {
+    text-align: center;
+    margin-top: 1.6rem;
+    color: hwb(0 21% 53%);
+}
+
+#header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.6rem;
+}
+
+#menu ul a {
+    color: hwb(0 100% 0%);
+}
+
+.container h3 {
+    font-size: 4.2rem;
+    text-align: center;
+    margin-block-start: 1.8rem;
+}
+
+.tasks {
+    max-width: 45.0em;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 2.5rem;
+    background-color: hwb(0 87% 13%);
+}
+
+.tasks li {
+    font-size: 1.8rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .1rem solid hwb(0 0% 100% / 0.314);
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.tasks li .tarefa-txt {
+    color: var(--color-primary);
+}
+
+.tasks li .done {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+}
+
+.options a,
+.options form button {
+    text-decoration: none;
+    color: hwb(0 18% 81%);
+    font-size: 2.3rem;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.options a:hover,
+.options form button:hover {
+    color: var(--color-primary);
+}
+
+.options a:nth-of-type(2) {
+    margin-inline: 1.5rem;
+}
+
+.options form button {
+    border: none;
+    outline: none;
+}
+
+.form {
+    max-width: 45.0rem;
+    width: 100%;
+    margin-top: 2.3rem;
+    margin-inline: auto;
+}
+
+.form .control {
+    display: flex;
+    flex-flow: column wrap;
+    gap: .3rem;
+    margin-bottom: .9rem;
+}
+
+.form .control label {
+    font-weight: bold;
+}
+
+.form .control input {
+    padding: .4rem;
+}
+
+.form .control input:focus,
+.form .control textarea:focus {
+    outline-color: aqua;
+}
+
+.form .control textarea {
+    height: 15.0rem;
+    padding: .4rem;
+    resize: none;
+}
+
+.form button {
+    border: none;
+    outline: none;
+    padding: 1.1rem 1.5rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: .8rem;
+    -webkit-border-radius: .8rem;
+    -moz-border-radius: .8rem;
+    -ms-border-radius: .8rem;
+    -o-border-radius: .8rem;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form button:first-of-type {
+    margin-inline-end: .5rem;
+}
+
+.form button:hover {
+    background-color: hwb(5 25% 25%);
+}

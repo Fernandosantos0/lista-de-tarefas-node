@@ -1,0 +1,44 @@
+<%- include('partials/head') %>
+
+<div class="container">
+    <h3>Todas as tasks</h3>
+
+    <% if(tasks.length !== 0) { %>
+
+        <ul class="tasks">
+            
+            <% tasks.forEach((task) => { %>
+                <li>
+
+                    <% if(task.done) { %>
+                        <p class="done"><%= task.title %></p>
+                    <% }else { %>
+                        <p class="tarefa-txt"><%= task.title %></p>
+                    <% } %>
+
+                    <div class="options">
+                        <a href="/tasks/check/<%= task.id %>"><i class="fa-solid fa-check"></i></a>
+
+                        <!-- Botão para editar a tarefa -->
+                        <a href="/tasks/edit/<%= task.id %>"><i class="fa-regular fa-pen-to-square"></i></a>
+
+                        <!-- Botão para remover a tarefa -->
+                        <form action="/tasks/delete" method="POST">
+                            <input type="hidden" name="id" value="<%= task.id %>">
+                            <button type="submit">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </form>
+                        
+                    </div>
+                </li>
+            <% }); %>
+            
+        </ul>
+
+    <% } else { %>
+        <p class="msg">Nenhuma tarefa foi cadastrada</p>
+    <% } %>
+</div>
+
+<%- include('partials/body') %>
