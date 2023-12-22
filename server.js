@@ -3,8 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const colors = require('colors');
-const consign = require('consign');
 const routes = require('./routes/routesTasks');
+const morgan = require('morgan');
 const path = require('path');
 
 /* Importando a conexão com o MySQL */
@@ -28,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /* Usando o sistema de rotas */
 app.use('/tasks', routes);
+
+/* MORGAN */
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms HTTP/:http-version" :user-agent :total-time[digits] :remote-addr'));
 
 /* Subindo o servidor */
 conexao.sync()
