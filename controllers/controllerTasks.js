@@ -39,8 +39,6 @@ module.exports = class controllerTasks {
 
             let task = await Tasks.findOne({ where: { id }, raw: true });
 
-            console.log('Oi:', task.done)
-
             if(task.done === 0) {
                 await Tasks.update({ done: true }, { where: { id } });
             } else {
