@@ -28,4 +28,7 @@ npm start
 
 ou 
 
+```bash
+yarn start
+```
 
