@@ -1,3 +1,7 @@
+[Home](#projeto-lista-de-tarefas) |
+[Instruções](#instruções-de-uso) |
+[Pacotes](#pacotes-ou-módulos-do-projeto)
+
 # Projeto: Lista de Tarefas
 
 Desenvolvimento de um sistema CRUD para cadastramento de tarefas utilizando o framework ExpressJS e integrando-se ao banco de dados MySQL com o uso do ORM Sequelize
