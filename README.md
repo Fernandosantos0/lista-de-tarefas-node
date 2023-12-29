@@ -52,5 +52,5 @@ yarn start
   }
 ```
 
-[LICENSE](https://github.com/Fernandosantos0/lista-de-tarefas-node/blob/main/LICENCE)
+[Termo da licensa](https://github.com/Fernandosantos0/lista-de-tarefas-node/blob/main/LICENCE)
 
